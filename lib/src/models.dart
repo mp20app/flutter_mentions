@@ -41,7 +41,7 @@ class Mention {
   final bool disableMarkup;
 
   /// Build Custom suggestion widget using this builder.
-  final Widget Function(Map<String, dynamic>) suggestionBuilder;
+  final Widget Function(Map<String, dynamic>, bool) suggestionBuilder;
 
   /// Allows to set custom markup for the mentioned item.
   final String Function(String trigger, String mention, String value)

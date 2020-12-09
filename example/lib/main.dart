@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                     ],
                     matchAll: false,
-                    suggestionBuilder: (data) {
+                    suggestionBuilder: (data, isLast) {
                       return Container(
                         padding: EdgeInsets.all(10.0),
                         child: Row(

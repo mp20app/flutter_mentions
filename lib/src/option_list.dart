@@ -12,7 +12,7 @@ class OptionList extends StatelessWidget {
     this.suggestionListInnerPadding,
   });
 
-  final Widget Function(Map<String, dynamic>) suggestionBuilder;
+  final Widget Function(Map<String, dynamic>, bool) suggestionBuilder;
 
   final List<Map<String, dynamic>> data;
 
@@ -51,7 +51,8 @@ class OptionList extends StatelessWidget {
                         onTap(data[newindex]);
                       },
                       child: suggestionBuilder != null
-                          ? suggestionBuilder(data[newindex])
+                          ? suggestionBuilder(
+                              data[newindex], index == data.length - 1)
                           : Container(
                               color: Colors.blue,
                               padding: EdgeInsets.all(20.0),
